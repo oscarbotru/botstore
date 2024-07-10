@@ -9,6 +9,8 @@ class Bot(models.Model):
     description = models.TextField(verbose_name='Описание', **NULLABLE)
     price = models.DecimalField(max_digits=12, decimal_places=2, verbose_name='Цена', default=0)
 
+    rating = models.PositiveSmallIntegerField(default=0, verbose_name='рейтинг')
+
     def __str__(self):
         return self.name
 
